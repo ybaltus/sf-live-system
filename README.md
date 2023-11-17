@@ -14,7 +14,8 @@ POC pour utiliser les twig et lives components (En version expérimental actuell
 1. composer install
 2. npm install --force
 3. npm run build
-3. docker-compose up -d
-4. symfony console doctrine:database:create
+3. docker-compose up -d (la bdd est dans un container docker)
 5. symfony console doctrine:migrations:migrate
+6. symfony console doctrine:fixtures:load
+7. symfony serve -d
 ```
