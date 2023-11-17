@@ -4,6 +4,9 @@
 
 {% block body %}
     <div class="row">
+            <a class="btn btn-primary" href="{{ path('app_music_search') }}" role="button">Accéder à la recherche</a>
+    </div>
+    <div class="row">
         {% for music in musics %}
                 {{ component('MusicComponent', {music}) }}
         {% endfor %}

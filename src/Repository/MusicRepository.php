@@ -45,4 +45,15 @@ class MusicRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
+
+    public function findBySearchTerm(string $value): array
+    {
+        return $this->createQueryBuilder('m')
+            ->where('m.title LIKE :val')
+            ->setParameter('val', '%'.$value.'%')
+            ->orderBy('m.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }

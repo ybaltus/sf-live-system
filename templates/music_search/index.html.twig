@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rechercher une musique{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <a class="btn btn-primary mb-10" href="{{ path('app_home') }}" role="button">Revenir à l'accueil</a>
+    </div>
+    <div class="row">
+        <div class="mt-3">
+            {{ component('MusicSearchComponent') }}
+        </div>
+    </div>
+{% endblock %}

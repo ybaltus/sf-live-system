@@ -1,0 +1,18 @@
+<div{{ attributes }}>
+    <!-- component html -->
+    <input
+            type="search"
+            data-model="debounce(300)|searchTerm"
+            placeholder="Rechercher un titre de musique..."
+            class="form-control"
+    >
+    {% if this.musics|length > 0 %}
+        {% for music in this.musics  %}
+            {{ component('MusicComponent', {music}) }}
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-primary">
+            Il n'y a pas de résultats !
+        </div>
+    {% endif %}
+</div>
