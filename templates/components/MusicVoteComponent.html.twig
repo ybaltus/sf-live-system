@@ -1,0 +1,20 @@
+<div{{ attributes }}>
+    <!-- component html -->
+    <span class="badge bg-secondary" data-poll="delay|">
+            Nombre de votes : {{ music.voting }}
+    </span>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button
+                class="btn btn-primary me-md-2"
+                type="button"
+                data-action="live#action"
+                data-action-name="vote(direction=up)"
+        >+</button>
+        <button
+                class="btn btn-primary"
+                type="button"
+                data-action="live#action"
+                data-action-name="vote(direction=down)"
+        >-</button>
+    </div>
+</div>
