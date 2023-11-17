@@ -1,0 +1,49 @@
+<div{{ attributes }}>
+    <!-- component html -->
+    {% if isEdited %}
+        <div class="alert alert-success">Musique éditée avec succès!</div>
+    {% endif %}
+
+    <form class="row">
+        <h1>{{ music.title }}</h1>
+        <hr>
+        <div class="mb-3">
+            <label for="music_title" class="form-label"><h2>Titre</h2></label>
+            <div class="input-group">
+                <input
+                        type="text"
+                        data-model="music.title"
+                        class="form-control"
+                        autofocus
+                        id="music_title"
+                >
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="music_info" class="form-label"><h2>Informations</h2></label>
+            <div class="input-group">
+                <textarea
+                        data-model="music.info"
+                        class="form-control"
+                        id="music_info"
+                >{{ music.info }}</textarea>
+            </div>
+        </div>
+    </form>
+
+    <div class="my-5 p-5 shadow bg-secondary text-light">
+        <h3>{{ music.title }}</h3>
+        {{ music.info }}
+    </div>
+
+    <div class="d-grid gap-2">
+        <button
+                data-action="live#action"
+                data-action-name="save"
+                class="btn btn-primary btn-sm"
+        >
+            Enregistrer les modifications
+        </button>
+    </div>
+</div>

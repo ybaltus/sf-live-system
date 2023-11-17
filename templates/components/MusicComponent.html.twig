@@ -3,5 +3,6 @@
         <h5 class="card-title">{{ music.title }}</h5>
         <h6 class="card-subtitle mb-2 text-body-secondary">{{ music.artist }}</h6>
         <p class="card-text">{{ music.info }}</p>
+        <a class="card-link" href="{{ path('app_music_edit', {'id': music.id}) }}" role="button">Éditer</a>
     </div>
 </div>

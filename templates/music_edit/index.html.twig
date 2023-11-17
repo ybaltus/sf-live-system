@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Éditer une musique{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <a class="btn btn-primary mb-10" href="{{ path('app_home') }}" role="button">Revenir à l'accueil</a>
+    </div>
+    {{ component('EditMusicComponent', {music}) }}
+
+{% endblock %}
